@@ -43,6 +43,6 @@ public class Item {
 
     @Override
     public String toString(){
-        return "name:" + name + " price:" + price + " type:" + type + " expiration:" + expiration;
+        return name + " " + price + " " + type + " " + expiration;
     }
 }
