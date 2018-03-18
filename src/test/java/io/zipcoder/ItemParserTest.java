@@ -111,7 +111,7 @@ public class ItemParserTest {
                 "===============\t\t\t===============\n" +
                 "Price:     3.23         seen:  5  times\n" +
                 "---------------\t\t\t---------------\n" +
-                "Price:     1.23         seen:  1  times\n" +
+                "Price:     1.23         seen:  1   time\n" +
                 "---------------\t\t\t---------------\n" +
                 "\n" +
                 "name:    Apples         seen:  4  times\n" +
