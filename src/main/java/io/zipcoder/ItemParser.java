@@ -21,7 +21,8 @@ public class ItemParser {
 
     public Item parseStringIntoItem(String rawItem) throws ItemParseException {
 
-        if (findName(rawItem) == null || findPrice(rawItem) == null) {
+        if (findName(rawItem) == null || findPrice(rawItem) == null ||
+            findType(rawItem) == null || findExpiration(rawItem) == null) {
             throw new ItemParseException();
         }
 
