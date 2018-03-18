@@ -1,12 +1,6 @@
 package io.zipcoder;
 
-import com.sun.javafx.geom.Edge;
 import org.apache.commons.io.IOUtils;
-
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
-
 
 public class Main {
 
@@ -20,16 +14,8 @@ public class Main {
         String output = (new Main()).readRawDataToString();
         //System.out.println(output);
         // TODO: parse the data in output into items, and display to console.
-
-        ItemParser test = new ItemParser();
-        Main mainTest = new Main();
-
-        ArrayList<String> arrayTest = test.parseRawDataIntoStringArray(output);
-
-
-        System.out.println(test.parseRawDataIntoStringArray(mainTest.readRawDataToString()));
-
+        ItemParser item = new ItemParser();
+        System.out.println(item.display());
     }
-
 }
 
