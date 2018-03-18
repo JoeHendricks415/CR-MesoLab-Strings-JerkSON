@@ -8,6 +8,7 @@ public class ItemParser {
 
     private Pattern pattern;
     private Matcher matcher;
+    private String setTimes;
     private int counter = 0;
     private Main main = new Main();
     private Map<String, ArrayList<Item>> groceryMap = new HashMap<String, ArrayList<Item>>();
@@ -123,12 +124,17 @@ public class ItemParser {
             displayBuild.append("\n" +
                     String.format("%15s%3s%5s", "===============", "\t\t\t", "===============") + "\n");
 
-            ArrayList<Double> uniquePriceList = getUniquePrices(item);
+        ArrayList<Double> uniquePriceList = getUniquePrices(item);
 
             for (int i = 0; i < uniquePriceList.size(); i++) {
+
+                if(seenPriceOccurences(item.getValue(), uniquePriceList.get(i)) == 1){
+                    setTimes = "   time";
+                } else setTimes = "  times";
+
                 displayBuild.append(String.format("%-11s%.2f%15s%2d%5s", "Price:", uniquePriceList.get(i)
                         , "seen: ", seenPriceOccurences(item.getValue(), uniquePriceList.get(i))
-                        , "  times"));
+                        , setTimes));
                 displayBuild.append("\n" +
                         String.format("%15s%3s%5s", "---------------", "\t\t\t", "---------------") + "\n");
             }
